@@ -2,10 +2,11 @@ package bestcab.com.bestcab;
 
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,6 +29,8 @@ import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 
 import java.util.ArrayList;
 
+import bestcab.com.bestcab.activity.BookOneWayCabActivity;
+import bestcab.com.bestcab.activity.BookRoundTripOutstationActivity;
 import bestcab.com.bestcab.fragments.BookOneWayTrip;
 
 /**
@@ -132,8 +135,13 @@ public class CustomListAdapter  extends ArrayAdapter<Card> {
                     Toast.makeText(getContext(),"Hello"+holder.title.getText().toString(),Toast.LENGTH_SHORT).show();
                     if (holder.title.getText().toString().equals("ONE-WAY TRIP")){
                         Toast.makeText(getContext(),"Hello......"+holder.title.getText().toString(),Toast.LENGTH_SHORT).show();
-                     fragment = new BookOneWayTrip();
-                        ((Activity)mContext).getFragmentManager().beginTransaction().replace(R.id.content_frame,fragment).commit();
+                        Intent intentViewSingleCustomer = new Intent(mContext.getApplicationContext(), BookOneWayCabActivity.class);
+                        mContext.startActivity(intentViewSingleCustomer);
+                    }
+                    else if (holder.title.getText().toString().equals("ROUNDTRIP OUTSTATION")){
+                        Toast.makeText(getContext(),"Hello......"+holder.title.getText().toString(),Toast.LENGTH_SHORT).show();
+                        Intent intentViewSingleCustomer = new Intent(mContext.getApplicationContext(), BookRoundTripOutstationActivity.class);
+                        mContext.startActivity(intentViewSingleCustomer);
                     }
                 }
             });
