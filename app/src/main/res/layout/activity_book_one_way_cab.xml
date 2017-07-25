@@ -133,13 +133,13 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/book"
+                    android:id="@+id/bsearchforcab"
                     android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cardTitle"
                     android:layout_weight="1"
                     android:layout_gravity="right"
-                    android:text="Book"
+                    android:text="@string/search_for_cab"
                     />
 
 

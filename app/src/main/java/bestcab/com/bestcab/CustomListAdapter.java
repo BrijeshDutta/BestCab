@@ -133,12 +133,11 @@ public class CustomListAdapter  extends ArrayAdapter<Card> {
                 public void onClick(View v) {
 
                     Toast.makeText(getContext(),"Hello"+holder.title.getText().toString(),Toast.LENGTH_SHORT).show();
-                    if (holder.title.getText().toString().equals("ONE-WAY TRIP")){
-                        Toast.makeText(getContext(),"Hello......"+holder.title.getText().toString(),Toast.LENGTH_SHORT).show();
+                    if (holder.title.getText().toString().equals(mContext.getString(R.string.onewaytriplable))){
                         Intent intentViewSingleCustomer = new Intent(mContext.getApplicationContext(), BookOneWayCabActivity.class);
                         mContext.startActivity(intentViewSingleCustomer);
                     }
-                    else if (holder.title.getText().toString().equals("ROUNDTRIP OUTSTATION")){
+                    else if (holder.title.getText().toString().equals(mContext.getString(R.string.roundtripoutstationlable))){
                         Toast.makeText(getContext(),"Hello......"+holder.title.getText().toString(),Toast.LENGTH_SHORT).show();
                         Intent intentViewSingleCustomer = new Intent(mContext.getApplicationContext(), BookRoundTripOutstationActivity.class);
                         mContext.startActivity(intentViewSingleCustomer);

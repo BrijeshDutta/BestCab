@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.BookOneWayCabActivity" />
-        <activity android:name=".activity.BookRoundTripOutstationActivity"></activity>
+        <activity android:name=".activity.BookRoundTripOutstationActivity" />
+        <activity android:name=".activity.CabTypeActivity"></activity>
     </application>
 
 </manifest>

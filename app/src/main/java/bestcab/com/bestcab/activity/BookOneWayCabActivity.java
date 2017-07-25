@@ -1,8 +1,10 @@
 package bestcab.com.bestcab.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.codetroopers.betterpickers.calendardatepicker.CalendarDatePickerDialogFragment;
@@ -16,6 +18,7 @@ import bestcab.com.bestcab.R;
 public class BookOneWayCabActivity extends AppCompatActivity {
 
     EditText onewaycabPickUpTime;
+    Button bsearchforcab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +43,18 @@ public class BookOneWayCabActivity extends AppCompatActivity {
                 }
             }
         });
+        bsearchforcab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentViewSingleCustomer = new Intent(BookOneWayCabActivity.this, CabTypeActivity.class);
+                startActivity(intentViewSingleCustomer);
+                //finish();
+            }
+        });
     }
     private void initializeUiComponents(){
         onewaycabPickUpTime = (EditText) findViewById(R.id.onewaycabPickUpTime);
+        bsearchforcab = (Button) findViewById(R.id.bsearchforcab);
     }
     private void showTimePicker(){
         TimePickerBuilder tpb = new TimePickerBuilder()
