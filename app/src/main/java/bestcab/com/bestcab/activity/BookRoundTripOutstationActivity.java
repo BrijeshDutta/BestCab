@@ -11,6 +11,6 @@ public class BookRoundTripOutstationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_round_trip_outstation);
-        super.setTitle("ROUNDTRIP OUTSTATION");
+        super.setTitle(getString(R.string.roundtripoutstationlable));
     }
 }
