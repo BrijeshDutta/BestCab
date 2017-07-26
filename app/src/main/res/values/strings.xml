@@ -11,4 +11,13 @@
     <string name="onewaytriplable">ONE-WAY TRIP</string>
     <string name="roundtripoutstationlable">ROUNDTRIP OUTSTATION</string>
     <string name="search_for_cab">SEARCH FOR CAB</string>
+    <string name="about_start_label"><![CDATA[Best cab is India\'s leading one way Local & Outstation cab service provider. Now when you travel one way from one city to another, just pay one-way we are currently present in Maharashtra pune City & covering 10 + cities oprating 100+ routes.]]></string>
+    <string name="helpline_details_lable">Available help you at any moment 9623461236 / 020-3242 1236 / 7385310706</string>
+    <string name="_24x7_helpline_label">24X7 Helpline</string>
+    <string name="instant_booking_and_confirmation">Instant booking and confirmation</string>
+    <string name="multiple_payment_option">Multiple payment Option</string>
+    <string name="like_end_of_the_trip_cash_to_the_driver_per_pay_via_netbanking_credit_card_paytm_wallet_plus_many_more">Like end of the trip cash to the driver, per pay via netbanking, credit card, paytm wallet plus many more.</string>
+    <string name="automatic_instant_invoice">Automatic Instant Invoice</string>
+    <string name="at_the_journy_your_registered_email_address">At the Journy your registered email Address.</string>
+    <string name="we_are_provide_minaral_water_news_paper_free_wifi_in_cab">We are provide Minaral water, News Paper free wifi in Cab.</string>
 </resources>

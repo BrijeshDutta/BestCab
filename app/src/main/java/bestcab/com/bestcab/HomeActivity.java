@@ -18,6 +18,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import bestcab.com.bestcab.fragments.AboutFragment;
 import bestcab.com.bestcab.fragments.BaseFragment;
 
 public class HomeActivity extends AppCompatActivity
@@ -86,8 +87,22 @@ public class HomeActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-        } else if (id == R.id.nav_about) {
+            fragment = new BaseFragment();
+            if (fragment !=null){
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,fragment);
+                fragmentTransaction.commit();
 
+            }
+        } else if (id == R.id.nav_about) {
+            fragment = new AboutFragment();
+            if (fragment !=null){
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,fragment);
+                fragmentTransaction.commit();
+                fragmentTransaction.addToBackStack("base");
+
+            }
         } else if (id == R.id.nav_services) {
 
         } else if (id == R.id.nav_packages) {
