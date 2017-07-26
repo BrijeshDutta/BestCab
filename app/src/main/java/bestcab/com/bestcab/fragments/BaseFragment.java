@@ -23,12 +23,11 @@ public class BaseFragment extends Fragment {
         // Inflate the layout for this fragment
         View viewBaseFragment = inflater.inflate(R.layout.fragment_base, container, false);
         listView = (ListView) viewBaseFragment.findViewById(R.id.listView);
-        Card card1 = new Card("drawable://" + R.drawable.test1, "One way Cab");
         ArrayList<Card> list = new ArrayList<>();
         list.add(new Card("drawable://" + R.drawable.yellow, getString(R.string.onewaytriplable)));
-        list.add(new Card("drawable://" + R.drawable.yellow, getString(R.string.roundtripoutstationlable)));
-        list.add(new Card("drawable://" + R.drawable.yellow, "LOCAL 8/80"));
-        list.add(new Card("drawable://" + R.drawable.yellow, "LOCAL 4/40"));
+        list.add(new Card("drawable://" + R.drawable.outstationroundtripimage, getString(R.string.roundtripoutstationlable)));
+        list.add(new Card("drawable://" + R.drawable.railflightwaybooking, "LOCAL 8/80"));
+        list.add(new Card("drawable://" + R.drawable.locatripimage, "LOCAL 4/40"));
         CustomListAdapter adapter = new CustomListAdapter(getActivity(), R.layout.card_layout_main, list);
         listView.setAdapter(adapter);
         return viewBaseFragment;

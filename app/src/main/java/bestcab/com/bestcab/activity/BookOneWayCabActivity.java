@@ -4,21 +4,26 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.codetroopers.betterpickers.calendardatepicker.CalendarDatePickerDialogFragment;
 import com.codetroopers.betterpickers.numberpicker.NumberPickerBuilder;
 import com.codetroopers.betterpickers.timepicker.TimePickerBuilder;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import bestcab.com.bestcab.R;
 
 public class BookOneWayCabActivity extends AppCompatActivity {
 
+    ArrayList<String> onewaycabfromList,onewaycabtoList;
     EditText onewaycabPickUpTime;
     Button bsearchforcab;
+    Spinner onewaycabFrom,onewaycabTo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +60,25 @@ public class BookOneWayCabActivity extends AppCompatActivity {
     private void initializeUiComponents(){
         onewaycabPickUpTime = (EditText) findViewById(R.id.onewaycabPickUpTime);
         bsearchforcab = (Button) findViewById(R.id.bsearchforcab);
+        onewaycabfromList = new ArrayList<>();
+        onewaycabfromList.add("From");
+        onewaycabfromList.add("Pune");
+        onewaycabfromList.add("Mumbai");
+        onewaycabfromList.add("Nashik");
+        onewaycabFrom = (Spinner) findViewById(R.id.onewaycabFrom);
+        ArrayAdapter<String> adapteronewaycabFrom = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, onewaycabfromList);
+        onewaycabFrom.setAdapter(adapteronewaycabFrom);
+
+        onewaycabTo  = (Spinner) findViewById(R.id.onewaycabTo);
+        onewaycabtoList = new ArrayList<>();
+        onewaycabtoList.add("To");
+        onewaycabtoList.add("Pune");
+        onewaycabtoList.add("Mumbai");
+        onewaycabtoList.add("Nashik");
+        ArrayAdapter<String> adapteronewaycabTo = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, onewaycabtoList);
+        onewaycabTo.setAdapter(adapteronewaycabTo);
     }
     private void showTimePicker(){
         TimePickerBuilder tpb = new TimePickerBuilder()
