@@ -149,6 +149,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="right"
                     android:text="@string/search_for_cab"
+                    android:drawableLeft="@drawable/ic_action_search"
                     />
 
 
