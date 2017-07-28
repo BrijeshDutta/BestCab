@@ -20,6 +20,8 @@ import java.util.ArrayList;
 
 import bestcab.com.bestcab.fragments.AboutFragment;
 import bestcab.com.bestcab.fragments.BaseFragment;
+import bestcab.com.bestcab.fragments.ContactUsFragment;
+import bestcab.com.bestcab.fragments.ServicesFragment;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -104,12 +106,28 @@ public class HomeActivity extends AppCompatActivity
 
             }
         } else if (id == R.id.nav_services) {
+            fragment = new ServicesFragment();
+            if (fragment !=null){
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,fragment);
+                fragmentTransaction.commit();
+                fragmentTransaction.addToBackStack("base");
+
+            }
 
         } else if (id == R.id.nav_packages) {
 
         } else if (id == R.id.nav_specialpackages) {
 
         } else if (id == R.id.nav_contactus) {
+            fragment = new ContactUsFragment();
+            if (fragment !=null){
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,fragment);
+                fragmentTransaction.commit();
+                fragmentTransaction.addToBackStack("base");
+
+            }
 
         }
 
