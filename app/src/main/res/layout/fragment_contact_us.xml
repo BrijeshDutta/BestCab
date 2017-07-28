@@ -21,7 +21,7 @@ tools:context="bestcab.com.bestcab.fragments.ContactUsFragment">
         android:id="@+id/cardAbout2"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="30dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -33,11 +33,11 @@ tools:context="bestcab.com.bestcab.fragments.ContactUsFragment">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="10dp"
+        android:elevation="30dp"
         android:id="@+id/cardAbout3"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="30dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +45,23 @@ tools:context="bestcab.com.bestcab.fragments.ContactUsFragment">
             android:autoLink="email"
             android:linksClickable="true"
             android:drawableLeft="@drawable/ic_action_email"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        android:id="@+id/cardAbout4"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/officelocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opp. Reliance Mart, KHARADI, PUNE - 14."
+            android:autoLink="email"
+            android:linksClickable="true"
+            android:drawableLeft="@drawable/ic_action_location"/>
     </android.support.v7.widget.CardView>
 </LinearLayout>
 </ScrollView>
