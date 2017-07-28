@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
@@ -8,6 +8,7 @@ android:paddingBottom="16dp"
 android:paddingLeft="16dp"
 android:paddingRight="16dp"
 android:paddingTop="16dp"
+    android:orientation="vertical"
 tools:context="bestcab.com.bestcab.fragments.ContactUsFragment">
 <LinearLayout
     android:layout_width="match_parent"
@@ -63,5 +64,107 @@ tools:context="bestcab.com.bestcab.fragments.ContactUsFragment">
             android:linksClickable="true"
             android:drawableLeft="@drawable/ic_action_location"/>
     </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        android:id="@+id/cardAbout5"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layoutleaveareply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvleaveareply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="20dp"
+                    android:inputType="text"
+                    android:text="Leave a Reply" />
+            </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_onewaycabPickUpTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etyourname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Name"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:paddingRight="20dp"
+                android:inputType="text"
+                android:paddingLeft="40dp"
+                android:background="@drawable/timepickerbackground"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_youremailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etyouremailid"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:paddingRight="20dp"
+                android:inputType="text"
+                android:paddingLeft="40dp"
+                android:background="@drawable/timepickerbackground"/>
+        </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etcomments"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Comments"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="20dp"
+                    android:inputType="text"
+                    android:paddingLeft="40dp"
+                    android:background="@drawable/timepickerbackground"/>
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bsubmit"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardTitle"
+                    android:layout_weight="1"
+                    android:layout_gravity="right"
+                    android:text="SUBMIT"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
-</ScrollView>
+</LinearLayout>
