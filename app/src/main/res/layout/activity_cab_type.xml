@@ -5,5 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="bestcab.com.bestcab.activity.CabTypeActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardViewBookOneWayCab"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+                    android:id="@+id/tempbookingDetials"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="booking details will appear"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="20dp"
+                    android:inputType="text"></TextView>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvcartypepictures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/cardViewCabPricing">
+
+                <TextView
+                    android:id="@+id/cabpricingdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Cab pricing details will appear"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="20dp"
+                    android:inputType="text"
+                    android:paddingLeft="40dp"/>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
